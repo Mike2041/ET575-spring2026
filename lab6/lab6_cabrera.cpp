@@ -100,6 +100,21 @@ int main(){
     float grade = 0;
 
     // collect data: final_exam, labs, and homework
+    
+    cout<<"Enter final exam grade: ";
+    cin>>final_exam;
+
+    cout<<"Enter labs grade: ";
+    cin>>labs;
+
+    cout<<"Enter homework grade: ";
+    cin>>homework;
+
+    // calculate the grade = final_exam *0.5 + labs*0.3 + homework*0.2
+    grade = final_exam * 0.5 + labs * 0.3 + homework * 0.2;
+    
+
+    // multiway condition
     /* 
     - grade: between 100 and 90, GPA = A
     - grade: between 89 and 80, GPA = B
@@ -109,12 +124,25 @@ int main(){
     - any another grade, GPA = ""
     */
 
-    // calculate the grade = final_exam *0.5 + labs*0.3 + homework*0.2
+
+    if (grade >= 90 && grade <= 100)
+
+        gpa = 'A';
+    else if (grade >= 80 && grade <= 89)
+        gpa = 'B';
+    else if (grade >= 70 && grade <= 79)
+        gpa = 'C';
+    else if (grade >= 60 && grade <= 69)
+        gpa = 'D';
+    else if (grade < 60)
+        gpa = 'F';
+    else
+        gpa = ' ';  // for invalid grades
     
 
-    // multiway condition
-
     // print result
+     cout<<"A final grade of "<<grade<<endl;
+     cout<<" is equivalent to a GPA of "<<gpa<<endl;
 
 
 
