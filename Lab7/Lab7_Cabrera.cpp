@@ -7,6 +7,7 @@ Lab7, nested conditional statement
 #include<iostream>
 
 using namespace std;
+
 int main(){
     cout<<"\n ----- Example 1: nested conditional ----"<<endl;
     // use nested conditional statement to check if a number is positive (even or odd),negative (even or odd), or zero
@@ -78,7 +79,81 @@ int main(){
     /*
     using nested conditional statement, that classifies the type of car a user can afford based on their budget.
     */
-    
+
+    cout<<"\n ----- A car according to your Budget -----"<<endl;
+
+    double budget;
+
+    // User input their car budget
+    cout<<"Enter your car budget: $";
+    cin>>budget;
+
+    // Conditions and outputs
+    if (budget < 0)
+    {
+        cout<<"Invalid budget!"<<endl;
+    }
+
+    else if (budget < 10000)
+    {
+        cout<<"Keep saving!"<<endl;
+    }
+
+    else if (budget <= 30000)
+    {
+        cout<<"You can afford an Economy Car = ";
+
+    // Nested condition
+        if (budget <= 20000)
+        {
+            cout<<"Compact Car"<<endl;
+        }
+
+        else
+        {
+            cout<<"Mid-size Car"<<endl;
+        }
+
+    }
+    else if (budget <= 70000)
+    {
+        cout<<"You can afford a Standard Car = ";
+
+    // Nested condition
+        if (budget <= 50000)
+        {
+            cout<<"Sedan"<<endl;
+        }
+
+        else
+        {
+            cout<<"Luxury Sedan"<<endl;
+        }
+
+    }
+    else if (budget <= 150000)
+    {
+        cout<<"You can afford a Performance-oriented Car = ";
+
+    // Nested condition
+        if (budget <= 100000)
+        {
+            cout<<"Sports Car"<<endl;
+        }
+
+        else
+        {
+            cout<<"Supercar"<<endl;
+        }
+
+    }
+    else
+    {
+
+        cout<<"High-end luxury cars"<<endl;
+
+        cout << "Maserati or Rolls-Royce?"<<endl;
+    }
 
 
     return 0;
