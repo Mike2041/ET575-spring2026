@@ -92,8 +92,60 @@ int main (){
     cout<<"logical comparison 4 = "<<logicalcom4<<endl;
 
 
+cout<<"\n------ Lab Exercise ------ "<<endl;
+
+    int a, b;
+
+    // User input
+    cout << "Enter first integer (a): ";
+    cin >> a;
+
+    cout << "Enter second integer (b): ";
+    cin >> b;
+
+    // Arithmetic operations
+    /*Ask the user to input two integers and save them in variables a and b.
+    Perform and display the results of addition, subtraction, multiplication, 
+    division, and modulus operations.*/
+
+    cout<<"\n------ Arithmetic Operations ------"<<endl;
+    cout<<"Addition (a + b): "<<a + b<<endl;
+    cout<<"Subtraction (a - b): "<<a - b<<endl;
+    cout<<"Multiplication (a * b): "<<a * b<<endl;
+    cout<<"Division (a / b): "<<a / b<<endl;
+    cout<<"Modulus (a % b): "<<a % b<<endl;
+
+    // Assignment operations
+    /*Increment a by 10 using the += operator.
+    Decrement b by 5 using the -= operator.
+    Display the updated values of a and b.*/
+
+    a += 10;
+    b -= 5;
+
+    cout<<"\n------ Assignment Operations ------"<<endl;
+    cout<<"Updated value of a (a += 10): "<<a<<endl;
+    cout<<"Updated value of b (b -= 5): "<<b<<endl;
+
+    // Boolean (logical) operations
+    /*Check and display the result of the following conditions:
+    Is a greater than b?
+    Is a equal to b?
+    Is a not equal to b?
+    Are both a and b positive numbers? (use &&)
+    Is either a or b a negative number? (use ||)
+    Is a not greater than b? (use ! operator)*/
 
 
+    cout<<"\n------ Boolean Operations ------"<<endl;
+    cout<<"Is a greater than b? "<<(a > b)<<endl;
+    cout<<"Is a equal to b? "<<(a == b)<<endl;
+    cout<<"Is a not equal to b? "<<(a != b)<<endl;
+    cout<<"Are both a and b positive numbers? "<<(a > 0 && b > 0)<<endl;
+    cout<<"Is either a or b a negative number? "<<(a < 0 || b < 0)<<endl;
+    cout<<"Is a not greater than b? "<<!(a > b)<<endl;
+
+    
     return 0;
 }
 
