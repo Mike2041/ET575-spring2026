@@ -58,19 +58,42 @@ int main(){
     cout<<"There is/are "<<counter_5<<" number/s multipled of 5"<<endl;
 
     cout<<"\n -------- EXERCISE 1 --------"<<endl;
-    // create a for loop that decrement from 21 to -21, inclusive, with a decrement step of 5 at each iteration. Also count the number of times that the loop counter is multiplied of 2 
+    // create a for loop that decrement from 21 to -21, inclusive, with a decrement step of 5 at each iteration. Also count the number of times that the loop counter is multiplied of 2. 
 
     int usernumber;
+    int countMultiplesOf2 = 0;
+
     cout<<"Enter an inital number: ";
     cin>>usernumber;
 
-    for(usernumber = 20; usernumber >- 5; usernumber += 2){
-        cout<<usernumber<<"\t";
-
+    for(;usernumber >= -21; usernumber -= 5 ){
+        cout<<"Current Value: " <<usernumber<<endl;
+        if (usernumber % 2 == 0){
+            countMultiplesOf2++;
+        }
 
     }
+    cout<<endl;
+    cout<<"Number of times the counter is a multiple of 2: "<<countMultiplesOf2<<endl;
 
-    return 0;
+     cout<<"\n -------- EXERCISE 2 --------"<<endl;
+     /*
+     Create a program that will ask the user to input the start (initial value of the counter).
+     After it, create a for loop that starts with the number entered by the user and counts up to 30 with an increment of 4 at each iteration.
+     */
+    
+
+    int start;   // firt variable for user input
+    int counter; // second variable for the loop
+
+    cout << "Enter the input starting number: ";
+    cin >> start;
+
+    for (counter = start; counter <= 30; counter = counter + 4) {
+        cout << counter << endl;
+    }
+
+  return 0;
 }
 
 
