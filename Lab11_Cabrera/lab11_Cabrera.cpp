@@ -7,7 +7,7 @@ March 9, 2026
 #include <iostream>
 
 using namespace std;
-int main(){
+int main() {
     cout<<"\n -------- Example 1: While loop as a counter"<<endl;
     // while loop to print from 1 to 5, step of 1 --> 1,2,3,4,5
     // step 1) initial value for the loop
@@ -101,7 +101,8 @@ do{
         cout<<"A non-negative number was entered! Loop will be terminated!";
         break;
     }
-}while(loopcounter<=4);
+}
+    while(loopcounter<=4);
 // print result
 cout<<"The total sum is = "<<sumnegative<<endl;
 
@@ -117,21 +118,60 @@ while (true){
     if(w<0 || w>balance){
         cout<<"Can't withdraw $"<<w<<". Enter another amount or press 0 to exit";
         cin>>w;
-        if(w ==0){
+    
+        if(w == 0){
             break;
         }
+
     else{
-        balance -=w;
+        balance -= w;
         break;
     }
-    }
 }
+
+}
+
 // print result
     cout<<"The balance is $"<<balance<<endl;
+    
+
+
 
 cout<<"\n -------- LAB EXERCISE --------"<<endl;
+/*
+Write a program that repeatedly asks the user to enter a number. The program should calculate 
+the sum of the digits of that integer and display the result. It should continue asking for
+ input until the user enters 0, zero, to stop the program.
 
+→ Requirements:
+Must use ‘while’ or ‘do-while’ loop.
+The program prompts the user to enter a number.
+Inside the loop block, it calculates the sum of the numbers by adding each number entered by the user.
+The loop will stop if the user enters 0, zero.
+Print the result after the loop. The result message should be as ‘The total sum is ____’
 
-return 0;
+*/
+    int number;
+    int totalSum = 0;
+
+    while (true) {
+        cout<<"Enter a number (0 to stop): ";
+        cin>>number;
+
+        if (number == 0)
+            break;
+    }
+
+        while (number != 0) {
+            totalSum += number % 10;
+            number = number / 10;
+            
+        }
+    }
+
+    cout<<"The total sum is "<<totalSum<<endl;
+  
+
+    return 0;
 }
 
