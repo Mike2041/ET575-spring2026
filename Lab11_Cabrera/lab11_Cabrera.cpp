@@ -138,7 +138,7 @@ while (true){
 
 
 
-/*cout<<"\n -------- LAB EXERCISE --------"<<endl;
+/* -------- LAB EXERCISE --------
 
 Write a program that repeatedly asks the user to enter a number. The program should calculate 
 the sum of the digits of that integer and display the result. It should continue asking for
@@ -151,26 +151,6 @@ Inside the loop block, it calculates the sum of the numbers by adding each numbe
 The loop will stop if the user enters 0, zero.
 Print the result after the loop. The result message should be as ‘The total sum is ____’
 
-
-    int number;
-    int totalSum = 0;
-
-    while (true) {
-        cout<<"Enter a number (0 to stop): ";
-        cin>>number;
-
-        if (number == 0)
-            break;
-    }
-
-        while (number != 0) {
-            totalSum += number % 10;
-            number = number / 10;
-            
-        }
-    }
-
-    cout<<"The total sum is "<<totalSum<<endl;
 */
     cout<<"\n -------- LAB EXERCISE --------"<<endl;
 
