@@ -19,61 +19,62 @@ int main() {
         i++;
     }
 
-cout<<"\n -------- Example 2: While loop as decrement a counter"<<endl;
+    
+    cout<<"\n -------- Example 2: While loop as decrement a counter"<<endl;
 // print from 3 to 0, step of -1 --> 3,2,1,0
-int m = 3;
-while(m>=0){
-    cout<<m<<"\t";
-    m--;
+    int m = 3;
+    while(m>=0){
+        cout<<m<<"\t";
+        m--;
 
-}
+    }
 
-cout<<"\n -------- Example 3: While loop as decrement a counter"<<endl;
+    cout<<"\n -------- Example 3: While loop as decrement a counter"<<endl;
 // print from 2 to 0, step of -1 
-m = 3;
-while(m-- >=0){
-    cout<<m<<"\t";
+    m = 3;
+    while(m-- >=0){
+        cout<<m<<"\t";
 
-}
-cout<<"\n -------- Example 4: While loop as decrement a counter"<<endl;
-// print from 3 to 0, step of -1 
-m = 3;
-while(--m >=0){
-    cout<<m<<"\t";
+    }
+    cout<<"\n -------- Example 4: While loop as decrement a counter"<<endl;
+    // print from 3 to 0, step of -1 
+    m = 3;
+    while(--m >=0){
+        cout<<m<<"\t";
 
-} 
+    } 
 
-cout<<"\n -------- Example 5: While loop to validate an input"<<endl;
-// while loop to validate if a number is not between 10 and 20
-int n;
-cout<<"Enter a number: ";
-cin>>n;
-
-// while loop to recollect the number again
-while(!(n>=10 && n<=20)){
-    cout<<"Enter a number between 10 and 20: ";
-    cin>>n;
-}
-// print result
-cout<<"Entered number = "<<n<<endl;
-
-cout<<"\n -------- Example 6: do-While loop to validate an input"<<endl;
-// check if a number is even or odd
-// use loop to check if the user wants to check another number
-char choice = 'y';
-do{
+    cout<<"\n -------- Example 5: While loop to validate an input"<<endl;
+    // while loop to validate if a number is not between 10 and 20
+    int n;
     cout<<"Enter a number: ";
     cin>>n;
-    if(n%2==0){
-        cout<<n<<" is EVEN!"<<endl;
+
+    // while loop to recollect the number again
+    while(!(n>=10 && n<=20)){
+        cout<<"Enter a number between 10 and 20: ";
+        cin>>n;
     }
-    else{
-        cout<<n<<" is ODD!"<<endl;
-    }
-    cout<<"Do you want another run? ";
-    cin>>choice;
-    
-}while(choice == 'y' || choice == 'Y');
+    // print result
+    cout<<"Entered number = "<<n<<endl;
+
+    cout<<"\n -------- Example 6: do-While loop to validate an input"<<endl;
+    // check if a number is even or odd
+    // use loop to check if the user wants to check another number
+    char choice = 'y';
+    do{
+        cout<<"Enter a number: ";
+        cin>>n;
+        if(n%2==0){
+            cout<<n<<" is EVEN!"<<endl;
+        }
+        else{
+            cout<<n<<" is ODD!"<<endl;
+        }
+        cout<<"Do you want another run? ";
+        cin>>choice;
+        
+    }while(choice == 'y' || choice == 'Y');
 
 cout<<"\n -------- Example 7: do-While loop to validate an input"<<endl;
 int number;
@@ -137,8 +138,8 @@ while (true){
 
 
 
-cout<<"\n -------- LAB EXERCISE --------"<<endl;
-/*
+/*cout<<"\n -------- LAB EXERCISE --------"<<endl;
+
 Write a program that repeatedly asks the user to enter a number. The program should calculate 
 the sum of the digits of that integer and display the result. It should continue asking for
  input until the user enters 0, zero, to stop the program.
@@ -150,7 +151,7 @@ Inside the loop block, it calculates the sum of the numbers by adding each numbe
 The loop will stop if the user enters 0, zero.
 Print the result after the loop. The result message should be as ‘The total sum is ____’
 
-*/
+
     int number;
     int totalSum = 0;
 
@@ -170,8 +171,26 @@ Print the result after the loop. The result message should be as ‘The total su
     }
 
     cout<<"The total sum is "<<totalSum<<endl;
-  
+*/
+    cout<<"\n -------- LAB EXERCISE --------"<<endl;
 
-    return 0;
+int totalSum = 0;
+
+while (true) {
+    cout<<"Enter a number (0 to stop): ";
+    cin>>number;
+
+    if (number == 0)
+        break;
+
+    while (number != 0) {
+        totalSum += number % 10;
+        number = number / 10;
+    }
 }
 
+cout<<"The total sum is "<<totalSum<<endl;
+
+    
+    return 0;
+}
