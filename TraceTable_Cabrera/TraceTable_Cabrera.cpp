@@ -8,7 +8,7 @@ Loop Analysis and Trace Table
 using namespace std;
 
 int main(){
-    cout<<"\n -------- Loop Analizis No.1 -------"<<endl;
+    cout<<"\n -------- Loop Analyzis No.1 -------"<<endl;
 int sum=0, count=0;
     for (int n = 20; n> 0; n-=2){
         if (n%3 ==0){
@@ -19,7 +19,7 @@ int sum=0, count=0;
     }
     cout<<"The sum is: "<<sum<<endl<<"The count is: "<<count<<endl;
 
-    cout<<"\n -------- Loop Analizis No.2 -------"<<endl;
+    cout<<"\n -------- Loop Analyzis No.2 -------"<<endl;
     int i=0, add=0;
     while(i<=10){
         i++;
