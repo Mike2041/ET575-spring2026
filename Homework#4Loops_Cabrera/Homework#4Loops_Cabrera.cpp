@@ -75,20 +75,28 @@ int main(){
     Set the dimension as a global variable with value 11x11. For this program, use nested for loop.
     */
 
-    
-    for(int i = 0; i < SIZE; i++)         // rows
-        for(int j = 0; j < SIZE; j++) {     // columns
-            // print # for the lowercase "r"
-            if(j == SIZE/4 ||                // left vertical line
-               (i == SIZE/4 && j > SIZE/4 && j < SIZE/2) ||  // top horizontal line
-               (i > SIZE/4 && i < SIZE/2 && j == SIZE/2))   // right vertical short line
-            {
+    for (int row=0; row<11; row++)        // 11 rows
+    {
+        for (int col=0; col<11; col++)    // 11 columns
+        {
+            if( (col==3 || col==4) && row>=2 && row<=9 )       // vertical part
                 cout << "# ";
-            } else {
+
+            else if ( row==3 && col>=3 && col<=7 )            // top right
+                cout << "# ";
+
+            else if ( row==4 && col>=3 && col<=7 )            // second line
+                cout << "# ";
+
+            else
                 cout << ". ";
-            
-        
+
+        }
+
         cout << endl;
+    }
+    
+    
     
     
     
