@@ -76,7 +76,7 @@ int main(){
     */
 
     
-    for(int i = 0; i < SIZE; i++) {         // rows
+    for(int i = 0; i < SIZE; i++)         // rows
         for(int j = 0; j < SIZE; j++) {     // columns
             // print # for the lowercase "r"
             if(j == SIZE/4 ||                // left vertical line
@@ -89,7 +89,7 @@ int main(){
             
         
         cout << endl;
-    }
+    
     
     
      
