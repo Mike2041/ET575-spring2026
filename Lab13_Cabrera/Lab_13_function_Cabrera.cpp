@@ -67,8 +67,25 @@ void printarea(int lenght, int width, int area){
     cout<<"The area of a rectangle with "<<lenght<<" and "<<width<<" is "<<area<<endl;
 }
 
+// Exercise: Define Two Functions
+// Function No. 2, printing the result 
+void printResult(int number, bool result)
+{
+    cout << "Is " << number << " even? " << result << endl;
+}
 
+bool isEven(int num);
+void printResult(int number, bool result);
 
+int main()
+{
+    int number;
 
+    cout << "Enter a number: ";
+    cin >> number;
 
+    bool check = isEven(number);   // call function 1
+    printResult(number, check);    // call function 2
 
+    return 0;
+}

@@ -40,7 +40,21 @@ int main(){
 
     printarea(length, width, area_rec);
 
-    cout<<"\n ------ EXERCISE ------"<<endl;
+    cout<<"\n -- EXERCISE: Define Two Functions ------"<<endl;
+    /*
+    one function that will check if a number is even. The function should have a parameter that requests an integer number to check and return a bool value. The argument for the function is collected from the main() function. Hint: use if-else statement within the function to check if a number is even. 
+    one function to print the result as Is ___ even? ____ 
+    */
+
+    // Function No. 1: check if number is even
+    bool isEven(int num){
+
+    if(num % 2 == 0)
+        return true;
+
+    else
+        return false;
+    }
     
     return 0;
-}
+    }
