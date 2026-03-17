@@ -69,23 +69,25 @@ void printarea(int lenght, int width, int area){
 
 // Exercise: Define Two Functions
 // Function No. 2, printing the result 
-void printResult(int number, bool result)
+/*void printResult(int number, bool result)
 {
     cout << "Is " << number << " even? " << result << endl;
-}
+}*/
 
-bool isEven(int num);
-void printResult(int number, bool result);
+/*
+    one function that will check if a number is even. The function should have a parameter that requests an integer number to check and return a bool value. The argument for the function is collected from the main() function. Hint: use if-else statement within the function to check if a number is even. 
+    one function to print the result as Is ___ even? ____ 
+    */
 
-int main()
-{
-    int number;
+     
+    bool isEven(int num){
+    cout<<"\n -- EXERCISE: Define Two Functions ------"<<endl;
+    if(num % 2 == 0)
+        return true;
 
-    cout << "Enter a number: ";
-    cin >> number;
+    else
+        return false;
+    }
 
-    bool check = isEven(number);   // call function 1
-    printResult(number, check);    // call function 2
+void printResult(int number, bool result){}
 
-    return 0;
-}

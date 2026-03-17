@@ -10,6 +10,7 @@ using namespace std;
 
 #include "Lab_13_function_Cabrera.cpp"
 
+
 int main(){
 //example 1: void function. void functions are functions that don't return any value.
     cout<<"\n ------ Example 1: void function ------ "<<endl;
@@ -39,22 +40,14 @@ int main(){
     int area_rec = arearectangle(length, width);
 
     printarea(length, width, area_rec);
-
-    cout<<"\n -- EXERCISE: Define Two Functions ------"<<endl;
-    /*
-    one function that will check if a number is even. The function should have a parameter that requests an integer number to check and return a bool value. The argument for the function is collected from the main() function. Hint: use if-else statement within the function to check if a number is even. 
-    one function to print the result as Is ___ even? ____ 
-    */
-
-    // Function No. 1: check if number is even
-    bool isEven(int num){
-
-    if(num % 2 == 0)
-        return true;
-
-    else
-        return false;
-    }
+    int x;
+    
+    cout<<"enter even/odd";
+    cin>>x;
+    
+    cout<<isEven(x)<<endl;
     
     return 0;
     }
+    
+    
