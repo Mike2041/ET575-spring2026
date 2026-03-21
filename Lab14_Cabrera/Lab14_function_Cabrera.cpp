@@ -64,7 +64,7 @@ iteration   |   int m   |   if(m>10)    |   else{return (linearfuction(m+2) * (m
 
     final result = -6*5*3*1*-1 =90
 */
-
+// Example 4: built-in function 
 int collectnumber(){
     int n;
     cout<<"Enter a positive number: ";
@@ -91,6 +91,49 @@ float hypotenuse(int side1, int side2){
 void printresult(int side1, int side2, float h){
     cout<<"The hypotenuse of triangle with sides "<<side1<<" and "<<side2<<" is = "<<h<<endl;
 
+}
+
+// Function 1 
+// This function asks the user for a number > 0
+    double getNumber(){
+    double num;  //variable to store the number
+
+// ask the user
+    cout<<"Enter a number greater than 0: ";
+    cin>>num;
+
+// keep asking if number is not valid
+    while (num<=0){
+        cout<<"Invalid! Try again: ";
+        cin>>num;
+    }
+
+    return num; 
+}
+
+// Function 2 
+// This function calculates distance between two points
+    double getDistance(double x1, double y1, double x2, double y2) {
+    
+// using the formula 
+    double part1 = (x2 - x1) * (x2 - x1); 
+    double part2 = (y2 - y1) * (y2 - y1); 
+    
+    double sum = part1 + part2;   // add both parts
+    
+    double result = sqrt(sum);    // square root
+    
+    return result;                // return the distance
+}
+
+// Function 3 
+// This function prints the final result  'The distance  of points(__ , ___) and (___, ___) is _____ ' 
+    void printResult(double x1, double y1, double x2, double y2, double d) {
+    
+    cout<<"The distance of points ("
+        <<x1<<", "<<y1<<") and ("
+        <<x2<<", "<<y2<<") is "
+        <<d<<endl;
 }
 
 
