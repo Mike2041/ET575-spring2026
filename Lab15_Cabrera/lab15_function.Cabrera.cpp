@@ -46,3 +46,35 @@ void printdices(int roll1, int roll2, bool result){
     cout<<"Is "<<roll1<<" the same as "<<roll2<<" ? "<<result<<endl;
     
 }
+
+// Exercise "Snake Eyes" game.
+// Function 1: roll a die (1 to 6)
+
+int rollDie(){
+    int number = rand() % 6+1;
+    return number;
+}
+
+// Function 2: check snake eyes
+bool isSnakeEyes(int a, int b){
+    if (a==1 && b==1){
+        return true;
+    } 
+    else{
+        return false;
+    }
+}
+
+// Function 3: print result
+void printResult(bool result){
+    if (result==true){
+        cout<<"Congrats! You got snake eyes"<<endl;
+    }
+
+    else{
+        cout<<"Better luck next time"<<endl;
+    }
+}
+
+
+

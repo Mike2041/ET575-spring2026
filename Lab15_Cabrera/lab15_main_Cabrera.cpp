@@ -23,13 +23,28 @@ int main (){
     cout<<random_5_12()<<endl; 
     
 
-
     cout<<"\n ---- Example 4: matching number ----- "<<endl;
     int roll1 = 1+rand()%6;
+
     cout<<endl<<endl;
     int roll2 = 1+rand()%6;
+
     bool resultmatch = matchdices(roll1,roll2);
     printdices(roll1,roll2,resultmatch);
+
+    cout<<"\n ----- Exercise “Snake Eyes” game ----- "<<endl;
+    
+    srand(time(0));  // start random numbers
+
+    int die1 = rollDie();
+    int die2 = rollDie();
+
+    cout<<"Die 1: "<<die1<<endl;
+    cout<<"Die 2: "<<die2<<endl;
+
+    bool answer = isSnakeEyes(die1, die2);
+
+    printResult(answer);
 
     return 0;
 }
