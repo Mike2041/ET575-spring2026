@@ -45,7 +45,7 @@ int main(){
     cout<<"The Maximum number is "<<m<<endl;
 
     cout<<"\n ----- Exercise Lab 6 ------ "<<endl;
-    
+    inarray();
 
     return 0;
 }

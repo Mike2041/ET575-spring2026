@@ -141,6 +141,8 @@ int maxnumber (int arraysize, int *arrnumbers){
     }
     return maxvalue;
 }
+
+// Exercise Lab 6
 // write a code, using loop, to find the LOWEST score of array 'scores', and prompt the result message as 'The lowest score is ___ ' where the blank is the lowest score of array 'scores'.
 
 // declare an array with 6 values ==> fixed length array
@@ -154,8 +156,19 @@ scores[2] = 75;
 scores[3] = 88;
 scores[4] = 100;
 scores[5] = 44;
-for(int index = 0; index<arraysize; index++){
-        cout<<arrnumbers[index]<<"\t";
+
+// Find Array Size
+int size = sizeof(scores)/sizeof(scores[0]);
+
+int lowest = scores[0];
+
+// Loop using array size
+for (int index = 1; index<size; index++){
+    if(scores[index]<lowest){
+        lowest = scores[index];
+    }
+}
+cout<<"The Lowest score is "<<lowest<<endl;
 
 }
 
