@@ -82,6 +82,83 @@ void introarray (){
 
 }
 
+// Example 4: Length of an Array
+void lenghtarray(){
+    // size function returns the number of bytes of 
+    cout<<"character = " <<sizeof(char)<<endl;
+    cout<<"string = " <<sizeof(string)<<endl;
+    cout<<"interger = " <<sizeof(int)<<endl;
+    cout<<"float = " <<sizeof(float)<<endl;
+    cout<<"double = " <<sizeof(double)<<endl;
+
+    // array
+    int numbers[] = {2, 7, 9, -10, 3};
+
+    cout<<"Lenth of Array Numbers = "<<sizeof(numbers)<<endl;
+    // to find the number of values in an array = total size of an array/ size of the data
+    cout<<"There is "<<(sizeof(numbers)/sizeof(int))<<" Values in an Array "<<endl;
+}
+
+// Example 5: Loop through an Array
+void looparray(){
+    const int s = 5;
+    int arr[s] = {1, 2, 3, 4, 5 };
+
+    // create a pointer to arr
+    int *ptr_array = arr; 
+
+    // loop through an array
+    for (int index = 0; index<s ; index++){
+        cout<<"index = "<<index<<" has value = "<<arr[index]<<endl;
+    }
+}
+
+// Example 6: Pass an Array to a function
+// function to populate data into an array
+void fillup(int arraysize, int arrnumbers[]){
+    for(int index = 0; index<arraysize; index++){
+        cout<<"Enter a Number: ";
+        cin>>arrnumbers[index];
+    }
+}
+
+// Function to Print all Data in an Array
+void printaray(int arraysize, int arrnumbers[]){
+    for(int index = 0; index<arraysize; index++){
+        cout<<arrnumbers[index]<<"\t";
+    }
+    cout<<endl;
+
+}
+
+// function to find the maximum number in an array
+int maxnumber (int arraysize, int *arrnumbers){
+    int maxvalue = arrnumbers[0];
+    for(int index = 0; index<arraysize; index++){
+        if(arrnumbers [index]>maxvalue){
+            maxvalue = arrnumbers[index];
+        }
+    }
+    return maxvalue;
+}
+// write a code, using loop, to find the LOWEST score of array 'scores', and prompt the result message as 'The lowest score is ___ ' where the blank is the lowest score of array 'scores'.
+
+// declare an array with 6 values ==> fixed length array
+void inarray(){
+int scores[6];
+
+// assign value to each item in array 'scores'
+scores[0] = 60;
+scores[1] = 90;
+scores[2] = 75;
+scores[3] = 88;
+scores[4] = 100;
+scores[5] = 44;
+for(int index = 0; index<arraysize; index++){
+        cout<<arrnumbers[index]<<"\t";
+
+}
+
 
 
 
