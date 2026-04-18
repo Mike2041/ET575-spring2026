@@ -15,18 +15,17 @@ using namespace std;
 // One function that counts all negative numbers and returns the number of negative numbers in an array.
 
 
-//int main(){
-  //  cout<<"\n ----- Example 1: Sums all Even Numbers ----- "<<endl;
-
 int main() {
-    int numbers[] = {2, -3, 8, -6,-8, 10, -2};
-    int size = sizeof(numbers) / sizeof(numbers[0]);
+  cout<<"\n ----- Defining Two Functions ----- "<<endl;
+
+    int numbers[] = {4, -3, 8, 6, -1, 12, -7, -9, 5};
+    int size = 9;
 
     int evenSum = sumEven(numbers, size);
     int negativeCount = countNegative(numbers, size);
 
-    cout << "Sum of even numbers: " << evenSum << endl;
-    cout << "Count of negative numbers: " << negativeCount << endl;
+    cout<<"Sum of even numbers: "<<evenSum<<endl;
+    cout<<"Number of negative numbers: "<<negativeCount<<endl;
 
     return 0;
 }
