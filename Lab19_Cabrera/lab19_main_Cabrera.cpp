@@ -1,44 +1,40 @@
 /*
 Miguel Eduardo Cabrera Callejas
-March, Monday 20, 2026
-Lab_19 1D Arrays and Functions 
+April 22, 2026
+Lab 19, 2D Arrays
 */
-
-/*
-In this exercise, you will practice using 1D arrays and functions in C++. 
-You will write a program that collects up to five non-zero integers from the user. 
-The input process ends when the user enters a sentinel value of 0 or when the array 
-reaches five numbers. After collecting the values, the program will calculate the 
-average of the entered numbers, determine which number in the array is closest to 
-that average, and display the results.
-*/
-
+const int COLSIZE = 5;
 #include<iostream>
-#include<cmath>
-
 #include "lab19_function_Cabrera.cpp"
 
 using namespace std;
 
-// Function Prototypes or Function declarations
-
-int collectnumber(int arr[], int maxSize);
-double Averagenumber(int arr[], int size);
-int Closestmean(int arr[], int size, double average);
-void Printresult(double average, int closest);
-
 int main(){
+    cout<<"\n ----- Example 1: 2D Array -----"<<endl;
 
-    const int SIZE = 5;
-    int numbers[SIZE];
-    int actualSize = collectnumber(numbers, SIZE);
-    double average = Averagenumber(numbers, actualSize);
-    int closest = Closestmean(numbers, actualSize, average);
+    // initialize a 2D Array
+    const int rowsize = 4;
+    int a[rowsize][COLSIZE] ={
+        {4, 8, -12},
+        {1, -8, 3, 5, 7},
+        {-6, 2, 9}
+    };
 
-    Printresult(average, closest);
+    // Call the Print Function
+    print2d(a,rowsize);
+
+    cout<<"\n ----- Example 2: Sum of all Positive Even Numbers -----"<<endl;
+    printsum(sumevenpositive(a,rowsize));
 
     return 0;
 }
+/*
+Lab exercise description:
+Create a multidimensional, 2D, array with 3 rows and 4 columns and use a function, populate() , to populate each cell of the array with numbers. The numbers will be randomly generated between 0 and 100.
+Define a function named printvaluearray(), to print each element in the 2D array.
+Define another function, average(), that will calculate and return the average of all numbers within the array.
+At the end, the program will ask if the user wants another run. For each run, there will be a new set of random numbers.  
+*/ 
 
 
 
