@@ -38,8 +38,38 @@ void printsum(int sumevenpositive){
 
 // Lab19 Exercise
 // 2D Array with 3 Rows and 4 Colums  
+void populate (int arr[3][4]){
+    for(int row = 0; row<3; row++){
+        for(int col = 0; col<4; col++){
+            arr[row][col] = rand() % 101; //random number between 0 and 100
+        }
+        
+        }
+    
+    }
 
+void printvaluearray(int arr[3][4]){
+    cout<<"\nThe 2D Array Exercise is: "<<endl;
+    for(int row = 0; row<3; row++){
+        for(int col = 0; col<4; col++){
+            cout<<arr[row][col]<<"\t";
+        }
+        cout<<endl;
+    }
+}
 
+double average(int arr[3][4]){
+    int sum = 0;
+    int count = 0;
+    
+    for(int row = 0; row<3; row++){
+        for(int col = 0; col<4; col++){
+            sum += arr[row][col];
+            count++;
+        }
+    }
+    return (double)sum/count;
+}
 
 
 
