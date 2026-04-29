@@ -21,6 +21,17 @@ int main(){
     cout<<"\n ----- Example 4: Append Data ----- "<<endl;
     appendmsg("samplefile.txt", "Miguel Eduardo Cabrera Callejas:");
 
+    cout<<"\n ----- Example 5: Check if a File Exists ----- "<<endl;
+  
+    checkfile("samplefile.txt");
+    checkfile("example1.txt");
+
+    cout<<"\n ----- Lab Exercise: File Handling ----- "<<endl;
+    string filename = "data_user.txt";
+    createFile(filename);                         // Create file and write initial text
+    appendToFile("Miguel Eduardo Cabrera Callejas", filename); // Append a name (or any message)
+    readFile(filename);           // Read and display file contents
+
     return 0;
 }
 

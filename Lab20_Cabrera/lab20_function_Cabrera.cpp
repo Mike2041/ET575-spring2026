@@ -85,9 +85,66 @@ void appendmsg(string filename, string msg){
     
 }
 
+// Example 5: Check if a File Exists
+void checkfile(string filename){
+    ifstream fin;
+    fin.open(filename);
 
+    // If the filename doesn't exist in the root directory, exit the function
+    if(fin.fail()){
+        cout<<"File "<<filename<<" doesn't exist!"<<endl;
+        return;
 
+    }
 
+    // If the filename exists, then read all the lines in the file
+    string eachline;
+    while(getline(fin, eachline)){
+        cout<<"Line 1 = "<<eachline<<endl;
 
+    }
 
+    // Close the File
+    fin.close();
+}
 
+/*Lab exercise description: define three functions:
+ a function to create a file named 'data_user.txt'. 
+ The program should write the following line in the text file: 
+“This is my output file – Type your full name.\n”  
+a function to append a new message to the file name 'data_user.txt'.
+The new message is passed to the function as an argument. 
+a function to read a file. The file name should be passed to the
+ function as an argument.
+*/
+
+// Function 1: Create File
+
+void createFile(string filename){
+    ofstream file;
+    file.open(filename);
+    file<<"This is my output file - Miguel Eduardo Cabrera Callejas.\n";
+    file.close();
+}
+
+// Function 2: Append a new message to the file
+void appendToFile(const string& message, string filename){
+    ofstream file;
+    file.open(filename, ios::app); // append mode
+    file<<message<<"\n";
+    file.close();
+}
+
+// Function 3: Read a file (file name passed as argument)
+void readFile(const string& filename){
+    ifstream file;
+    file.open(filename);
+    string line;
+
+        while(getline(file, line)){
+            cout<<line<<endl;
+        }
+        file.close();
+  
+ 
+}
