@@ -24,7 +24,7 @@ int main(){
     cout<<"\n ----- Example 5: Check if a File Exists ----- "<<endl;
   
     checkfile("samplefile.txt");
-    checkfile("example1.txt");
+    checkfile("National-Geographic..txt");
 
     cout<<"\n ----- Lab Exercise: File Handling ----- "<<endl;
     string filename = "data_user.txt";
